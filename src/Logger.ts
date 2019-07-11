@@ -1,9 +1,10 @@
 'use strict'
 
-import Configurable from "./Configurable";
+import { BaseConfig } from './config/BaseConfig';
 
-export default class Logger {
-    constructor(config: Configurable) {
+
+export class Logger {
+    constructor(config: BaseConfig) {
         
     }
 }
