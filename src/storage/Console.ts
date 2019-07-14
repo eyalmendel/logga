@@ -1,7 +1,7 @@
 'use strict'
 
+import { Entry } from '../entry/Entry';
 import Persistable from "./Persistable";
-import Entry from "../entry/Entry";
 
 export class Console implements Persistable {
     setResource(resource?: any): void {

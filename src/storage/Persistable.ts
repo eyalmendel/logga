@@ -1,6 +1,6 @@
 'use strict'
 
-import Entry from "../entry/Entry";
+import { Entry } from '../entry/Entry';
 
 /**
  * Interface for storage entities
