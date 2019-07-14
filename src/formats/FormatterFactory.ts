@@ -6,7 +6,7 @@ import { JsonFormatter } from './JsonFormatter';
 
 export class FormatterFactory {
 
-    create(key: string): Formatter {
+    static create(key: string): Formatter {
         
         switch(key) {
             case 'string': {

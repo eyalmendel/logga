@@ -10,10 +10,10 @@ export class BaseConfig {
 
     private defaultFormatter: string = "string";
     private defaultPersistable: string = "console";
-    private tag: string | undefined;
-    private level: string | undefined;
-    private storage: Persistable | undefined;
-    private formatter: Formatter | undefined;
+    private tag!: string;
+    private level!: string;
+    private storageMethod!: Persistable;
+    private formatter!: Formatter;
 
     constructor(json?: any) {
         if(json === undefined) {
@@ -26,30 +26,37 @@ export class BaseConfig {
     private setDefault(): void {
         this.tag = "";
         this.level = Levels.INFO;
-        this.storage = (new PersistableFactory().create(this.defaultPersistable));
-        this.formatter = (new FormatterFactory().create(this.defaultFormatter));
+        this.storageMethod = PersistableFactory
+            .create(this.defaultPersistable);
+        this.formatter = FormatterFactory
+            .create(this.defaultFormatter);
     }
 
     private fromJson(json: any): void {
+        const { method, resource } = json.storage;
+        
         this.tag = json.tag;
         this.level = json.level;
-        this.storage = (new PersistableFactory().create(json.storage));
-        this.formatter = (new FormatterFactory().create(json.format));
+        this.storageMethod = PersistableFactory
+            .create(method)
+            .setResource(resource);
+        this.formatter = FormatterFactory
+            .create(json.format);
     }
 
-    public getTag(): string | undefined {
+    public getTag(): string {
         return this.tag;
     }
 
-    public getLevel(): string | undefined {
+    public getLevel(): string {
         return this.level;
     }
 
-    public getStorage(): Persistable | undefined {
-        return this.storage;
+    public getStorageMethod(): Persistable {
+        return this.storageMethod;
     }
 
-    public getFormatter(): Formatter | undefined {
+    public getFormatter(): Formatter {
         return this.formatter;
     }
 
@@ -61,8 +68,8 @@ export class BaseConfig {
         this.level = level;
     }
 
-    public setStorage(storage: Persistable): void {
-        this.storage = storage;
+    public setStorageMethod(storageMethod: Persistable): void {
+        this.storageMethod = storageMethod;
     }
 
     public setFormatter(formatter: Formatter): void {

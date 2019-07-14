@@ -3,7 +3,13 @@ import { Entry } from '../entry/Entry';
 import Persistable from "./Persistable";
 
 export class File implements Persistable {
-    setResource(resource: any): void {
+
+    getResource(): any {
+
+    }
+
+    setResource(resource: any): Persistable {
+        return this;
     }
 
     save(entry: Entry): boolean {

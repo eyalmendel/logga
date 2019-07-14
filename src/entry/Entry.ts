@@ -25,6 +25,11 @@ export class Entry {
         this.showProcessId = value;
         return this;
     }
+
+    toggleFileDetails(value: boolean): Entry {
+        this.showFileDetails = value;
+        return this;
+    }
     
     setLevel(level: string): Entry {
         this.level = level;

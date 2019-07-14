@@ -6,7 +6,7 @@ import { File } from './File';
 
 export class PersistableFactory {
 
-    create(key: string): Persistable {
+    static create(key: string): Persistable {
 
         switch(key) {
             case 'console': {

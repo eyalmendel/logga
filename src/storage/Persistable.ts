@@ -7,7 +7,9 @@ import { Entry } from '../entry/Entry';
  */
 export default interface Persistable {
 
-    setResource(resource?: any): void;
+    getResource(): any;
+
+    setResource(resource?: any): Persistable;
     
     save(entry: Entry): boolean;
 }
