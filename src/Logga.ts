@@ -2,7 +2,7 @@ import { Logger } from './Logger';
 import { BaseConfig } from "./config/BaseConfig";
 
 
-export class Logga {
+export default class Logga {
     
     private static defaultConfig: BaseConfig = new BaseConfig();
 
