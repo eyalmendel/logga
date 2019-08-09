@@ -8,7 +8,7 @@ A simple logging facility written in Typescript.
 
 ### Usage
 
-After requiring logga you should create a new logger instance using the `createLogger` method.
+After requiring `logga-ts` you should create a new logger instance using the `createLogger` method.
 This method should be passed the logger's configuration using a json object (literal javascript object). Calling `createLogger` with an empty json, or without any argument at all will result in the default logger. Any missing attriubute in the configuration will be filled automatically with its corresponding default value (see [Configuration](#configuration)).
 
 ``` js
@@ -25,7 +25,7 @@ logger.log('warning', 'my logging message');
 
 ### Logging Levels
 
-Logga offers the following logging levels:
+`logga-ts` offers the following logging levels:
 
 ``` js
 const LevelValues: any = {
@@ -40,7 +40,7 @@ const LevelValues: any = {
 };
 ```
 Omitting the 'level' attribute from the json configuration object will result in the default 'info' level for the created logger instance.
-Note: In the current logga version the logging levels are not extendable.
+Note: In the current `logga-ts` version the logging levels are not extendable.
 
 ### Configuration
 
@@ -64,15 +64,15 @@ const config = {
 let logger = Logga.createLogger(config);
 ...
 ```
-Logga's default configuration is to log each entry to the console in string format.
+`logga-ts`'s default configuration is to log each entry to the console in string format.
 
 ### Formats
 
-Logga offers two format types for the log entries: string format and JSON format. Each entry will be serialized before it is appended to the storage medium, but the entry data will be presented according to the configured format. Omitting the `format` attribute from the configuration will result the default string format.
+`logga-ts` offers two format types for the log entries: string format and JSON format. Each entry will be serialized before it is appended to the storage medium, but the entry data will be presented according to the configured format. Omitting the `format` attribute from the configuration will result the default string format.
 
 ### Persistance
 
-Logga offers two persistance methods: file storage and the console. The `storage` attribute in the configuration file is an object consisting of the following fields:
+`logga-ts` offers two persistance methods: file storage and the console. The `storage` attribute in the configuration file is an object consisting of the following fields:
 * `method`: the persistance method to be used (defaults to the console),
 * `resource`: a path to the log file in case the file method was chosen.
 
