@@ -1,7 +1,5 @@
 'use strict'
 
-import { Entry } from '../entry/Entry';
-
 /**
  * Interface for storage entities
  */
@@ -11,5 +9,5 @@ export default interface Persistable {
 
     setResource(resource?: any): Persistable;
     
-    save(entry: Entry): boolean;
+    save(entry: string): boolean;
 }

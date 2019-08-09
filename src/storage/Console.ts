@@ -1,12 +1,11 @@
 'use strict'
 
-import { Entry } from '../entry/Entry';
 import Persistable from "./Persistable";
 
 export class Console implements Persistable {
 
     getResource(): any {
-        
+        // this implementation doesn't need a resource
     }
 
     setResource(resource?: any): Persistable {
@@ -14,7 +13,8 @@ export class Console implements Persistable {
         return this;
     }
 
-    save(entry: Entry): boolean {
+    save(entry: string): boolean {
+        console.log(entry);
         return true;
     }
 }

@@ -1,7 +1,7 @@
 {
   "name": "logga",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Simple logging facility written in Typescript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,20 @@
   "author": "Eyal Mendel",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^12.6.2",
     "typescript": "^3.5.3"
-  }
+  },
+  "dependencies": {
+    "@types/stack-trace": "0.0.29",
+    "stack-trace": "0.0.10"
+  },
+  "files": ["lib/**/*"],
+  "keywords": [
+    "log",
+    "logger",
+    "nodejs log",
+    "json",
+    "json log",
+    "typescript"
+  ]
 }

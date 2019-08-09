@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 import { Entry } from "../entry/Entry";
 
@@ -6,6 +6,7 @@ import { Entry } from "../entry/Entry";
  * Interface for log entries format types
  */
 export interface Formatter {
+  
+  format(entry: Entry): any;
 
-    format(entry: Entry): any;
 }
