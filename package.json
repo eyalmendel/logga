@@ -1,7 +1,7 @@
 {
   "name": "logga",
   "version": "1.0.0",
-  "description": "A Simple logging facility written in Typescript",
+  "description": "A simple logging facility written in Typescript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
