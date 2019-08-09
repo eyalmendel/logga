@@ -1,12 +1,12 @@
 {
   "name": "logga-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple logging facility written in Typescript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "prepare" : "npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,9 @@
     "@types/stack-trace": "0.0.29",
     "stack-trace": "0.0.10"
   },
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "keywords": [
     "log",
     "logger",
