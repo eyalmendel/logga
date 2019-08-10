@@ -2,6 +2,8 @@
 
 A simple logging facility written in Typescript.
 
+[![NPM][npm-icon]][npm-url]
+
 ### Installation
 
 `npm install --save logga-ts`
@@ -66,7 +68,7 @@ let logger = Logga.createLogger(config);
 ```
 `logga-ts`'s default configuration is to log each entry to the console in string format.
 
-#### Customizing Default Configuration
+##### Customizing Default Configuration
 `logga-ts` offers developers to set their own default configuration using the `configure` method. This method expects a json object just like the `createLogger` method.
 
 ### Formats
@@ -80,3 +82,6 @@ let logger = Logga.createLogger(config);
 * `resource`: a path to the log file in case the file method was chosen.
 
 In case of an error during the persistance phase, the logger will use the fallback method (console) and will add an error message (in the console) to indicate what went wrong. In any case the logger will not fail and will not crash the app.
+
+[npm-icon]: https://nodei.co/npm/logga-ts.svg?downloads=true
+[npm-url]: https://npmjs.org/package/logga-ts
