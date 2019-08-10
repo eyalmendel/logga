@@ -12,7 +12,7 @@ After requiring `logga-ts` you should create a new logger instance using the `cr
 This method should be passed the logger's configuration using a json object (literal javascript object). Calling `createLogger` with an empty json, or without any argument at all will result in the default logger. Any missing attriubute in the configuration will be filled automatically with its corresponding default value (see [Configuration](#configuration)).
 
 ``` js
-const logga = require('logga-ts');
+const logga = require('logga-ts').Logga;
 
 let logger = logga.createLogger({
     tag: 'my-module',
@@ -65,6 +65,9 @@ let logger = Logga.createLogger(config);
 ...
 ```
 `logga-ts`'s default configuration is to log each entry to the console in string format.
+
+#### Customizing Default Configuration
+`logga-ts` offers developers to set their own default configuration using the `configure` method. This method expects a json object just like the `createLogger` method.
 
 ### Formats
 
